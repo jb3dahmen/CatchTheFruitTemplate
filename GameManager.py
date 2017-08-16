@@ -29,13 +29,13 @@ class GameManager:
         self.score = 0
         #How "fast" the fruits will fall
         self.fruitspeed = 7
-        #The time that will be used to spawn fruits TODO: rename
+        #The time that will be used to spawn fruits
         self.time = 0
-        #This is a list that will store the fruits TODO: rename
+        #This is a list that will store the fruits
         self.items = []
         #How many points the fruits are worth
         self.pointsValue = 0
-        #Where the fruit points will appear once a fruit is caught TODO: maybe this should be an attribute of fruit?
+        #Where the fruit points will appear once a fruit is caught
         self.pointsx = 0
         self.pointsy = 0
         #Checks whether the fruit points should be displayed
@@ -54,6 +54,7 @@ class GameManager:
         self.backgroundMusicPlayer = backgroundMusicPlayer
         
         #Set up the game's player
+        #Adjust where the player will be located on the drawing canvas here
         self.player = Player(self.playerimage, width/2, height - 100)
         
         
@@ -64,10 +65,13 @@ class GameManager:
         
         #Increase the difficulty (speed of fruit) over time
         self.difficultyChange()
-        #Spawn the fruits
-        self.spawn()
-        #Move the fruits
-        self.moveFruit()
+        
+        #Call a class function here to make the fruit "spawn"
+        #PUT SOME CODE HERE
+
+        #Call a class function here to make the fruit fall or move
+        #PUT SOME CODE HERE
+
         #Draw the player, fruits, and points
         self.drawWorld()
         #Check if the game has ended
@@ -111,17 +115,12 @@ class GameManager:
         
     #Here we move the fruits by using their move() method    
     def moveFruit(self):
-        #/**********************************/
-  
+        
         #Finish this for loop to make the fruits fall 
-        
-        #/**********************************/
-        
-        
-        for i in range(len(self.items)):
+        '''for i in :
             #inside the loop
             aFruit = self.items[i]
-            aFruit.move()
+            aFruit.move()'''
             
     #Here we check if the game has ended by checking the time
     #How could we change this to end the game by reaching a certain score?
@@ -151,7 +150,7 @@ class GameManager:
             
             #If the player caught a fruit
             #Display the fruit points
-            if(self.player.Intersects(aFruit)):
+            '''if():
             
                 self.score = self.score + aFruit.value
                 self.pointsValue = aFruit.value
@@ -166,10 +165,9 @@ class GameManager:
                 #print("CAUGHT!")
                 self.itemCatchMusicPlayer.play()
             
-            self.displayPoints(self.pointsValue, self.pointsx, self.pointsy)
+            self.displayPoints(self.pointsValue, self.pointsx, self.pointsy)'''
         
         #remove caught fruits from the list  
-        #TODO: maybe remove fruits that move off screen?
         for i in range(len(itemsToRemove)):
             itemToRemove = itemsToRemove[i]
             self.items.remove(itemToRemove)

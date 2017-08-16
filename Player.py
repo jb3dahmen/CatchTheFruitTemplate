@@ -11,28 +11,17 @@ class Player(Item):
         
     #This is where we tell the player how to move left using its location
     def moveLeft(self):
-        #print("Move Left");
+
         if(self.xlocation - 10 > 0):
-            #/**********************************/
-            
-            #Make the player move to the left
-            
-            #/**********************************/
             #PUT SOME CODE HERE
-            self.xlocation -= 10
+            pass
     
     #This is where we tell the player how to move right using its location
     def moveRight(self):
-        #print("Move Right");
+
         if(self.xlocation + 10 < width):
-        
-            #/**********************************/
-        
-            #make the player move to the right
-        
-            #/**********************************/
             #PUT SOME CODE HERE
-            self.xlocation += 10
+            pass
         
         
         
